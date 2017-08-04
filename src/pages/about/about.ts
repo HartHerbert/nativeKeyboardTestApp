@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import { Content, NavController, Platform} from 'ionic-angular';
+
+declare let NativeKeyboard;
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
+
+
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  @ViewChild(Content) content:Content;
+
+
+  constructor(public navCtrl: NavController, public platform:Platform) {
 
   }
+
 
 }
